@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="cart_order.js"></script> 
+    <script
+      src="https://kit.fontawesome.com/e77ab91887.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .badge:after{
+            content:attr(value);
+            font-size:16px;
+            color: #fff;
+            background: rgb(240, 143, 40);
+            border-radius:50%;
+            padding: 0 5px;
+            position:relative;
+            left:-8px;
+            top:-10px;
+            opacity:0.9;
+        }
+        .btn-primary{
+            border: none;
+        }
+        .img-container {
+      position: relative;
+      width: 100%;
+      padding-top: 100%; /* Maintain 1:1 aspect ratio (square) */
+    }
+    .img-container_div img{
+      border-radius: 25px;
+    }
+    .img-container_detail img{
+      border-radius: 25px 25px 0px 0px;
+    }
+    .img-container_big img{
+      border-radius: 25px;
+    }
+    .amazing_selection img{
+      border-radius: 100px;
+    }
+     .img-fluid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }  
+    
+    </style>
+    <!-- navbar starts -->
+    <nav class="navbar navbar-expand-lg bg-333333">
+      <div class="container d-flex justify-content-between">
+        <a class="navbar-brand text-uppercase fs-2" href="Index.html"><img src="img/logo.png" alt="logo"></a>
+        <div class="d-none d-lg-block">
+          <form class="d-flex search-bar ps-3 rounded-pill" role="search">
+            <input
+              class="w-100"
+              type="search"
+              placeholder="Search here"
+              aria-label="Search"
+              style="border: none; outline: none; background-color: transparent"
+            />
+            <button class="btn" type="submit">
+              <i class="search-icon fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        
+        <div class="d-flex align-items-center gap-0">
+          <div class="container mt-5">
+            <div class="dropdown" style="margin-top: -48px;">
+              <button class="btn btn-primary bg-transparent p-0 m-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: rgb(255, 255, 255);">
+                <i class="fa-solid fa-bars icon" style="font-size: 24px;"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="indivisual_product_men.html">MEN</a>
+                <a class="dropdown-item" href="indivisual_product_woman.html">WOMAN</a>
+                <a class="dropdown-item" href="indivisual_product_child.html">CHILD</a>
+              </div>
+            </div>
+          </div>
+          <!-- Bootstrap JS and jQuery -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+          <div class="d-flex gap-0">
+
+            
+            <i class="fa badge fa-lg" style="color: rgb(255, 255, 255);margin-top: 10%;" value=8>&#xf07a;</i>
+          <!-- <a href="cart_order.html" class="fa fa-cart-shopping icon" style="font-size: 20px;"></a> -->
+          <a href="#" class="fa fa-qrcode icon" style="font-size: 20px;"></a>
+          </div>
+        </div>
+      </div>
+      <div class="d-block d-lg-none w-100 px-2 px-md-4 mb-2">
+        <form class="d-flex search-bar w-100 ps-3 rounded-pill" role="search">
+          <input
+            class="w-100"
+            type="search"
+            placeholder="Search here"
+            aria-label="Search"
+            style="border: none; outline: none; background-color: transparent"
+          />
+          <button class="btn" type="submit">
+            <i class="search-icon fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+    <!-- navbar ends -->
+    <hr style="color: white; margin-top:2px; height: 2px;">
+
+    <!-- hero starts -->
+    <div class="d-flex justify-content-center">
+        <img src="Img/how_20to_20start_20a_20clothing_20brand.png" class=" w-100 hero-image" alt="img" />
+    </div>
+      <!-- hero ends -->
+
+    <hr style="color: white; height: 2px;">
+
+      <!-- New arrival Starts -->
+      <div class="new_arrival container" >
+        <p class="new" style="color: white;margin: 0%; padding: 0%;font-size: 90px; font-family:Inria Serif ; justify-content: center; display: flex;">NEW</p>
+        <p class="arrivals" style="color: white;margin: 0%; padding: 0%;font-size: 50px;justify-content: center; display: flex;font-family: Josefin Slab;">ARRIVALS</p>
+      </div>
+      
+
+    
+
+    <!-- All Category -->
+    <div class="py-5" >
+      <div class="container">
+        <div class="row row-cols-2 row-cols-md-6 mb-5" style="display: flex; justify-content: center;" >
+          <div>
+            <a
+              class="primary-btn all_category_btn px-4 py-2 px-ms-5 py-md-3 mb-4"
+              href="all_product.html"
+              style="text-decoration: none"
+              >All</a
+            >
+          </div>
+          <div>
+            <a
+              class="primary-btn px-4 py-2 px-ms-5 py-md-3 mb-4"
+              href="all_product.html"
+              style="text-decoration: none"
+              >Woman</a
+            >
+          </div>
+          <div>
+            <a
+              class="primary-btn px-4 py-2 px-ms-5 py-md-3 mb-4"
+              href="all_product.html"
+              style="text-decoration: none"
+              >Child</a
+            >
+          </div>
+          <div>
+            <a
+              class="primary-btn px-4 py-2 px-ms-5 py-md-3 mb-4"
+              href="all_product.html"
+              style="text-decoration: none"
+              >Men</a
+            >
+          </div>
+        </div>
+
+
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+              <div class="img-container img-container_detail">
+                <img src="img/mayoral-baby-girls-pink-cotton-floral-dress-set-496038-878af107c0b79e940287d2be6a4ceb4762f1dd88.jpg" class="img-fluid" alt="Photo 1">
+              </div>
+              <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+        <div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+          <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+          <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+        </div>
+      </div>
+            </div>
+    
+            <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+              <div class="img-container img-container_detail">
+                <img src="img/5738e3c3943f1eee1471ddce86e04487.jpg" class="img-fluid" alt="Photo 1">
+              </div>
+              <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+        <div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+          <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+          <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+        </div>
+      </div>
+            </div>
+    
+            <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+              <div class="img-container img-container_detail">
+                <img src="img/7a6b19b0-86c3-4f21-92b5-b12bba96963a.png" class="img-fluid" alt="Photo 1">
+              </div>
+              <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+        <div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+          <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+          <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+        </div>
+      </div>
+            </div>
+    
+            <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+              <div class="img-container img-container_detail">
+                <img src="img/mayoral-baby-girls-pink-cotton-floral-dress-set-496038-878af107c0b79e940287d2be6a4ceb4762f1dd88.jpg" class="img-fluid" alt="Photo 1">
+              </div>
+              <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+        <div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+          <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+          <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+        </div>
+      </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- All Category ends-->
+
+
+    <div class="new_arrival container" >
+      <p class="new" style="color: white;margin: 0%; padding: 0%;font-size: 50px; font-family:Inria Serif ; justify-content: center; display: flex;">OUR FEATURED COLLECTION</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+          <div class="img-container img-container_big">
+            <img src="img/mayoral-baby-girls-pink-cotton-floral-dress-set-496038-878af107c0b79e940287d2be6a4ceb4762f1dd88.jpg" class="img-fluid" alt="Photo 1">
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+          <div class="img-container img-container_big">
+            <img src="img/5738e3c3943f1eee1471ddce86e04487.jpg" class="img-fluid" alt="Photo 1">
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+          <div class="img-container img-container_big">
+            <img src="img/7a6b19b0-86c3-4f21-92b5-b12bba96963a.png" class="img-fluid" alt="Photo 1">
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+          <div class="img-container img-container_big">
+            <img src="img/mayoral-baby-girls-pink-cotton-floral-dress-set-496038-878af107c0b79e940287d2be6a4ceb4762f1dd88.jpg" class="img-fluid" alt="Photo 1">
+          </div>
+        </div>
+      </div>
+    </div>
+<!--  -->
+
+
+
+
+
+<!--  -->
+    <div class="new_arrival container" >
+      <p class="new" style="color: white;margin: 0%; padding: 0%;font-size: 50px; font-family:Josefin Slab ; justify-content: center; display: flex;">Women Clothing</p>
+      <p class="new" style="color: white;margin: 0%; padding: 0%;font-size: 30px; font-family:Josefin Slab ; justify-content: center; display: flex;">One Line About Women Clothing</p>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+          <div class="img-container img-container_detail">
+            <img src="img/mayoral-baby-girls-pink-cotton-floral-dress-set-496038-878af107c0b79e940287d2be6a4ceb4762f1dd88.jpg" class="img-fluid" alt="Photo 1">
+          </div>
+          <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+    <div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+      <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+      <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+    </div>
+  </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+          <div class="img-container img-container_detail">
+            <img src="img/5738e3c3943f1eee1471ddce86e04487.jpg" class="img-fluid" alt="Photo 1">
+          </div>
+          <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+    <div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+      <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+      <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+    </div>
+  </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+          <div class="img-container img-container_detail">
+            <img src="img/7a6b19b0-86c3-4f21-92b5-b12bba96963a.png" class="img-fluid" alt="Photo 1">
+          </div>
+          <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+    <div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+      <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+      <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+    </div>
+  </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+          <div class="img-container img-container_detail">
+            <img src="img/mayoral-baby-girls-pink-cotton-floral-dress-set-496038-878af107c0b79e940287d2be6a4ceb4762f1dd88.jpg" class="img-fluid" alt="Photo 1">
+          </div>
+          <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+    <div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+      <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+      <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+
+<!--  -->
+
+
+
+
+
+
+
+<!--  -->
+<div class="new_arrival container" >
+  <p class="new" style="color: white;margin: 0%; padding: 0%;font-size: 50px; font-family:Josefin Slab ; justify-content: center; display: flex;">Our Top Seller</p>
+</div>
+
+<div class="container" style="border-radius: 25px; border: 2px solid #FFF; background: linear-gradient(279deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 0.01%, rgba(255, 255, 255, 0.01) 99.9%); box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.25); filter: blur(0.05000000074505806px);padding-top: 20px;">
+  <div class="row">
+    <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+      <div class="img-container img-container_detail">
+        <img src="img/mayoral-baby-girls-pink-cotton-floral-dress-set-496038-878af107c0b79e940287d2be6a4ceb4762f1dd88.jpg" class="img-fluid" alt="Photo 1">
+      </div>
+      <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+<div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+  <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+  <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+</div>
+</div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+      <div class="img-container img-container_detail">
+        <img src="img/5738e3c3943f1eee1471ddce86e04487.jpg" class="img-fluid" alt="Photo 1">
+      </div>
+      <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+<div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+  <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+  <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+</div>
+</div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+      <div class="img-container img-container_detail">
+        <img src="img/7a6b19b0-86c3-4f21-92b5-b12bba96963a.png" class="img-fluid" alt="Photo 1">
+      </div>
+      <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+<div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+  <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+  <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+</div>
+</div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-6 mb-4" style="border-radius: 10px;">
+      <div class="img-container img-container_detail">
+        <img src="img/mayoral-baby-girls-pink-cotton-floral-dress-set-496038-878af107c0b79e940287d2be6a4ceb4762f1dd88.jpg" class="img-fluid" alt="Photo 1">
+      </div>
+      <div class="mt-md- px-3 py-2 bg-white" style="border-radius: 0px 0px 15px 15px;">
+<div class="d-flex gap-md-2 flex-wrap fs-sm-16 justify-content-between align-items-center" >
+  <p class="fs-md-5 fs-sm-4 m-0 text-nowrap">Product Name</p>
+  <p class="m-0 fs-md-4 fs-sm-3 h4">৳188</p>
+</div>
+</div>
+    </div>
+  </div>
+  <a class="d-flex justify-content-center align-items-center" href="indivisual_product_men.html" style="text-decoration: none;"> <button class="d-flex justify-content-center align-items-center see_more_btn "><h3>See More</h3></button></a>
+</div>
+
+<!--  -->
+
+
+   <!-- footer -->
+   <div style="background-color: #000000">
+    <div class="container py-5 mt-5">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="">
+            <p class="mb-5 navbar-brand text-center text-lg-start" style="margin-top: -30px ;padding-bottom: 30px;"><img src="img/logo.png" alt="logo"></p>
+            <div class="" style="margin-top: -50px;">
+              <div
+                class="d-flex gap-2 align-items-center bg-white px-4 py-3 rounded-3 mb-4">
+                <p class="m-0">Email:</p>
+                <input
+                  type="text"
+                  placeholder="Email@gmail.com"
+                  style="outline: none; border: none"
+                />
+              </div>
+              <div
+                class="d-flex gap-2 align-items-center bg-white px-4 py-3 rounded-3 mb-4">
+                <p class="m-0">Phone:</p>
+                <input
+                  type="text"
+                  placeholder="0123456789 "
+                  style="outline: none; border: none"
+                />
+              </div>
+              <div class="bg-white px-4 py-3 rounded-3">
+                <a>Visit our page on Facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 ps-lg-5 mt-5 mt-lg-0">
+          <div class="footer-middle">
+            <div>
+              <p class="fs-4 text-center text-lg-start"style="text-decoration: none; font-size: 18px; color: #ffffff">Necessary Links</p>
+            </div>
+            <hr style="text-decoration: none; font-size: 18px; color: #ffffff">
+            <div
+              class="d-flex flex-column gap-3 align-items-center align-items-lg-start"
+            >
+              <a
+                style="text-decoration: none; font-size: 18px; color: #ffffff"
+                >About Us
+              </a>
+
+              <a
+                style="text-decoration: none; font-size: 18px; color: #ffffff"
+              >
+                Terms and Conditions
+              </a>
+
+              <a
+                style="text-decoration: none; font-size: 18px; color: #ffffff"
+              >
+                Privacy Policy
+              </a>
+
+              <a
+                style="text-decoration: none; font-size: 18px; color: #ffffff"
+              >
+                Return and Refund Policy
+              </a>
+
+              <a
+                style="text-decoration: none; font-size: 18px; color: #ffffff"
+              >
+                Order Delivery Policy
+              </a>
+
+              <a
+                style="text-decoration: none; font-size: 18px; color: #ffffff"
+              >
+                My account
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
